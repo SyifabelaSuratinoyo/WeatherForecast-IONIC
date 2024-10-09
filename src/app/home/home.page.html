@@ -1,0 +1,48 @@
+<ion-content>
+    <!-- Judul Weather Forecast -->
+    <h1 class="forecast-title">Weather Forecast</h1>
+    <h5 class="author-info">Syifabela Suratinoyo - 220211060344</h5>
+  
+  <ion-searchbar 
+    [(ngModel)]="city" 
+    placeholder="Search City"
+    (ionInput)="searchWeather()"
+  ></ion-searchbar>
+
+  <ion-note class="error-message" *ngIf="errorMessage">{{ errorMessage }}</ion-note>
+
+  <!-- Show loader when fetching data -->
+  <div class="loading-spinner" *ngIf="isLoading">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+
+  <ion-card class="weather-card" *ngIf="weatherData && !isLoading">
+    <!-- Today's Report Section -->
+    <ion-card-header>
+      <ion-card-title>
+        <h2>
+          Today's Report
+          <span class="date">{{ today | date: 'EEE dd MMM' }}</span> <!-- Menggunakan span untuk menampilkan tanggal -->
+        </h2>
+      </ion-card-title>
+    </ion-card-header>  
+
+    <!-- Weather Report Section -->
+    <ion-card-content class="weather-content">
+      <div class="weather-info">
+        <h3><ion-icon name="location"></ion-icon> {{ weatherData.name }}</h3>
+        <img 
+          [src]="'http://openweathermap.org/img/wn/' + weatherData.weather[0].icon + '@4x.png'" 
+          alt="Weather Icon" 
+          class="weather-icon"
+        >
+        <p>{{ weatherData.weather[0].description }}</p>
+        <h5>{{ weatherData.main.temp | number: '1.0-0' }} °C</h5>
+      </div>
+      <div class="additional-info">
+        <ion-icon name="speedometer-outline"></ion-icon> Wind: {{ weatherData.wind.speed }} km/h <br>
+        <ion-icon name="water-outline"></ion-icon> Hum: {{ weatherData.main.humidity }} %
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

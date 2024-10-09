@@ -1,0 +1,112 @@
+.forecast-title {
+  text-align: center; /* Mengatur teks agar di tengah */
+  font-size: 30px; /* Ukuran font judul */
+  font-weight: bold; /* Membuat teks tebal */
+  margin-bottom: 10px; /* Jarak atas dan bawah */
+  color: #ffffff; /* Warna teks */
+}
+
+.author-info {
+  text-align: center; /* Pusatkan nama dan NIM */
+  font-size: 12px; /* Ukuran font untuk nama dan NIM lebih kecil */
+  color: #666; /* Warna teks untuk nama dan NIM */
+  margin: 0px; /* Spasi di bawah nama dan NIM */
+}
+
+/* Content Styles */
+ion-content {
+  background-color: #f0f0f0; /* Background color */
+  padding: 16px; /* Padding for content */
+}
+
+/* Loading Spinner Styles */
+.loading-spinner {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center spinner */
+  align-items: center;
+  margin-top: 20px; /* Top margin for spacing */
+}
+
+/* Error Message Styles */
+.error-message {
+  color: rgb(255, 255, 255); /* Error text color */
+  text-align: center; /* Center text */
+  font-size: 16px; /* Font size for error */
+  margin-top: 20px; /* Top margin for spacing */
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center the element */
+}
+
+/* Card Styles */
+ion-card {
+  margin: 20px; /* Margin for card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for card */
+}
+
+.weather-card {
+  position: relative; /* Allow positioning of child elements */
+  background: linear-gradient(to bottom, #51aefc, #a1d6f9); /* Gradient background */
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Box shadow */
+}
+
+/* Location styles */
+.weather-card h2 {
+  font-size: 20px; /* Ukuran font untuk lokasi */
+  color: #ffffff; /* Warna konsisten */
+  margin: 0px; /* Menghapus margin untuk posisi yang tepat */
+  position: relative; /* Ubah ke relative agar tidak hilang */
+  display: flex; /* Gunakan flexbox untuk mengatur tampilan */
+  justify-content: space-between; /* Ruang antara judul dan tanggal */
+  align-items: center; /* Vertikal center untuk elemen dalam */
+}
+
+.weather-card .date {
+  font-size: 16px; /* Ukuran font untuk tanggal */
+  color: #f8ec46; /* Warna untuk tanggal */
+  margin-left: 10px; /* Jarak antara judul dan tanggal */
+}
+
+
+/* Adjusting the temperature styles */
+.weather-info {
+  text-align: center; /* Center the temperature */
+}
+
+.weather-info h3 {
+  font-size: 35px; /* Adjust as needed */
+  color: #ffffff; /* Keeping the color consistent */
+}
+
+.weather-info h5 {
+  font-size: 40px; /* Adjust as needed */
+  color: #f8ec46; /* Keeping the color consistent */
+  margin: 8px 0; /* Reduced margin for closer spacing */
+}
+
+.weather-info p {
+  font-size: 25px; /* Adjust as needed */
+  color: #ffffff; /* Keeping the color consistent */
+}
+
+/* Weather icon style */
+.weather-icon {
+  display: block; /* Ensure it takes up its own space */
+  margin: 10px auto; /* Center the icon */
+}
+
+/* General styling for other elements */
+.weather-content {
+  padding: 16px; /* Ensure padding is maintained */
+}
+
+/* Additional Info Styles */
+.additional-info {
+  display: flex; /* Use flexbox for spacing */
+  justify-content: space-around; /* Space between items */
+  font-size: 14px; /* Font size for additional info */
+  color: #666; /* Text color for additional info */
+  margin-top: 30px;
+}
+
